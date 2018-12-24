@@ -29,7 +29,7 @@ You may view this application by
 
 1) ```git clone url```
 2) ```npm install```
-3) ```npm start```
+3) run ```npm start``` in one terminal and ```node server``` in another terminal.
 
 ## Future additions
 1) Time stamp on each message
