@@ -4,13 +4,18 @@ import Chat from './components/Chat';
 import MessageList from './components/MessageList';
 
 class App extends Component {
-  state = {
-    currentUsername: null,
-    currentId: null,
-    currentScreen: 'usernameForm'
+  constructor() {
+    super();
+    this.state = {
+      currentUsername: null,
+      currentId: null,
+      currentScreen: 'usernameForm'
+    }
+    this.onUsernameSubmitted = this.onUsernameSubmitted.bind(this);
   }
 
-  onUsernameSubmitted = username => {
+
+  onUsernameSubmitted(username) {
     fetch('http://localhost:3001/users', {
       method: 'POST',
       headers: {

@@ -6,15 +6,19 @@ import OnlineList from './OnlineList';
 import TypingIndicator from './TypingIndicator';
 
 class Chat extends Component {
-        state = {
+    constructor() {
+        super();
+        this.state = {
             currentUser: null,
             currentRoom: {},
             messages:[],
             usersWhoAreTyping: []
         }
+        this.sendTypingEvent = this.sendTypingEvent.bind(this);
+        this.onSend = this.onSend.bind(this);
+    }
 
-        
-        sendTypingEvent = () => {
+        sendTypingEvent() {
             this.state.currentUser
             .isTypingIn({ roomId: this.state.currentRoom.id })
             .catch(error => console.error('error', error))
@@ -68,7 +72,7 @@ class Chat extends Component {
             .catch(error => console.error('error', error))
         }
 
-      onSend = text => {
+      onSend(text) {
           this.state.currentUser.sendMessage({
               text,
               roomId: this.state.currentRoom.id

@@ -9,20 +9,22 @@ class UsernameForm extends Component {
     this.state = {
       username: ''
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleSubmit = e => {
+  handleSubmit(e) {
     e.preventDefault()
     this.props.handleSubmit(this.state.username)
   }
 
-  handleChange = e => {
+  handleChange(e) {
     this.setState({ username: e.target.value })
   }
 
   render() {
     return (
-      <main className="username-form container-fluid">
+      <main className="container col-12 username-form">
         <Navbar />
         <p className="welcome-message">
             Welcome to "My Messenger", 

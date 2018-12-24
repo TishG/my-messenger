@@ -8,10 +8,6 @@ import {
   } from 'react-desktop/macOs';
 
   class MessageList extends Component {
-      timeSent = ()=> {
-        var date = new Date();
-        return date.toLocaleTimeString('en-US');
-      }
       render() {
           return(
             <ListView>
@@ -34,9 +30,6 @@ import {
         </Text>
         <Text color="#414141" size="13">
           {message.text}
-        </Text>
-        <Text color="#414141" size="13">
-          {this.timeSent}
         </Text>
       </ListViewRow>  
     )
