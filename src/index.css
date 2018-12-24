@@ -1,3 +1,76 @@
 body {
   font-family:  BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-size: 1.5em;
+  background-color: #e3f2fd;
+  height: 50px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+
+.welcome-message {
+  padding-bottom: 5%;
+  line-height: 25px;
+}
+
+
+.username-form {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background-color: #e3f2fd;
+  padding-bottom: 437px;
+}
+
+.username-form button {
+  margin-top: 10px;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+
+}
+
+.online-list {
+  /* box-shadow: 0 -8px 20px 2px #DEDEE3; */
+  background: #F9F9FB;
+  width: 200px;
+}
+
+.chat {
+  /* background: #F4FAFE; */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.send-message-form{
+  padding: 10px 15px 10px 15px;
+  display: flex;
+}
+
+.send-message-form div {
+  flex: 1;
+  margin-right: 5px;
+}
+
+
+.online-list-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+li span {
+  padding-right: 5px;
 }
